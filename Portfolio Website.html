@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Yadav - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 1rem;
+            text-align: center;
+            white-space: nowrap;
+        }
+        thead th {
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        tfoot td {
+            background-color: #e5e7eb;
+            font-style: italic;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-8 lg:px-12 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-800">Aditya Yadav</h1>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6 text-gray-600 font-semibold">
+                    <li><a href="#about" class="hover:text-gray-900 transition-colors">About</a></li>
+                    <li><a href="#skills" class="hover:text-gray-900 transition-colors">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-gray-900 transition-colors">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 md:px-8 lg:px-12 py-10 space-y-12">
+
+        <!-- About Me Section -->
+        <section id="about" class="bg-white p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+            <figure class="flex-shrink-0 text-center">
+                <img src="https://raw.githubusercontent.com/aditya-yadav161003/Full_Stack/main/Profile%20picture.jpg" alt="A profile photo of Aditya" class="rounded-full w-40 h-40 object-cover border-4 border-gray-300 shadow-md mx-auto">
+                <figcaption class="mt-2 text-gray-500 text-sm">Aditya's Profile Photo</figcaption>
+            </figure>
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold mb-2 text-gray-800">Hey there! I'm Aditya.</h2>
+                <p class="text-gray-600 leading-relaxed max-w-2xl">
+                    I'm currently a B.Tech student at GLA University, specializing in Computer Science with a focus on AIML and the Internet of Things. I have a passion for technology and love tackling real-world problems through code. My experience includes projects in fraud detection, smart waste management, and even automated drones. I have a strong foundation in languages like Python, Java, HTML, and CSS, along with soft skills in leadership, problem-solving, teamwork, and communication.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white p-8 rounded-2xl shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Skills & Tools</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h3 class="font-bold text-lg mb-2 text-gray-700">Languages</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h3 class="font-bold text-lg mb-2 text-gray-700">Machine Learning</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h3 class="font-bold text-lg mb-2 text-gray-700">Tools</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>Git</li>
+                        <li>Power BI</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white p-8 rounded-2xl shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Projects I've Worked On</h2>
+            <div class="space-y-6">
+                <article class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <h3 class="font-semibold text-lg text-gray-700">Online Payments Fraud Detection</h3>
+                    <p class="text-gray-600 mt-2">Built a machine learning model to spot fraudulent transactions using a Kaggle dataset.</p>
+                </article>
+                <article class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <h3 class="font-semibold text-lg text-gray-700">Smart Waste Management System</h3>
+                    <p class="text-gray-600 mt-2">Developed an IoT-based system that uses sensors for automation.</p>
+                </article>
+                <article class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <h3 class="font-semibold text-lg text-gray-700">Automated Drone System</h3>
+                    <p class="text-gray-600 mt-2">Created an autonomous drone system for monitoring, powered by AI.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Let's Connect!</h2>
+            <p class="text-gray-600 mb-6">Feel free to reach out to me via email or LinkedIn.</p>
+            <div class="flex flex-wrap justify-center space-x-4">
+                <a href="mailto:adity6946@gmail.com" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">Email</a>
+                <a href="https://linkedin.com/in/aditya-yadav-570846289" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">LinkedIn</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="bg-white shadow-xl rounded-lg overflow-hidden w-full m-4">
+        <div class="p-6">
+            <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Academic Timetable</h1>
+            <p class="text-center text-gray-500 mb-6 text-sm">Odd Semester Programme - Session 2025-2026</p>
+        </div>
+        <div class="table-container">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm rounded-tl-lg">Day/Time</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">08:00-09:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">09:00-10:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">10:00-11:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">11:00-12:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">12:00-01:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">01:00-02:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">02:00-03:00</th>
+                        <th class="py-3 px-4 border-b-2 border-gray-300 bg-blue-600 text-white font-semibold text-sm">03:00-04:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-semibold text-gray-700 bg-gray-50 border-r">Monday</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE3251<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE0712<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE0704<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">PQRH-0001<br>ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="bg-green-200 px-4 py-3">BCSE0512<br>ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-semibold text-gray-700 bg-gray-50 border-r">Tuesday</td>
+                        <td class="bg-green-200 px-4 py-3" colspan="2">BCSE0702<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE0512<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE251<br>ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="bg-green-200 px-4 py-3" colspan="2">3CC2/BCSE07042/ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-semibold text-gray-700 bg-gray-50 border-r">Wednesday</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE0712<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE1251<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">PGDH-0001<br>ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="bg-green-200 px-4 py-3">PVRH-0001<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE1012<br>ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-semibold text-gray-700 bg-gray-50 border-r">Thursday</td>
+                        <td class="bg-green-200 px-4 py-3" colspan="2">3CC/BCSE0704/ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-semibold text-gray-700 bg-gray-50 border-r">Friday</td>
+                        <td class="bg-green-200 px-4 py-3">PQRH-0001<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3">BCSE0704<br>ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3" colspan="2">3CC/BCSE0807/ABXII-7023<br>3CC/BCSE0807/ABXII-7023</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                        <td class="bg-green-200 px-4 py-3" colspan="2">3CC/BCSE0734/ABXII-7023<br>3CC/BCSE0734/ABXII-7023</td>
+                        <td class="bg-green-200 px-4 py-3" colspan="2">PCPH-0002<br>ABI-413<br>(3CC-3CD)</td>
+                        <td class="px-4 py-3 bg-gray-100"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="py-3 px-4 border-t-2 border-gray-300 text-gray-600 rounded-bl-lg" colspan="11">
+                            Note: Timetable is subject to change. Please refer to the official notice board for updates.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12 text-center">
+        <p>&copy; 2025 Aditya Yadav. All Rights Reserved.</p>
+    </footer>
+
+
+
+</body>
+</html>
