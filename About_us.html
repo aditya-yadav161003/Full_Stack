@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Aditya Yadav</title>
+  <style>
+    /* Element Selector & HSL color */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, hsl(210, 36%, 96%) 0%, hsl(210, 40%, 98%) 100%);
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgb(30, 41, 59) 0%, rgb(51, 65, 85) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      pointer-events: none;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 2rem;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+    }
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+    }
+
+    /* ID selector */
+    #main-heading {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Class selector and pseudo-element */
+    .bio-text::first-line {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Attribute selector */
+    a[target="_blank"]::after {
+      content: ' 🔗';
+      margin-left: 4px;
+    }
+
+    nav {
+      position: relative;
+      z-index: 1;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 24px;
+      transition: all 0.3s;
+      display: inline-block;
+      position: relative;
+    }
+    /* Pseudo-class for navigation links */
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #93c5fd;
+      transform: translateY(-2px);
+    }
+
+    /* Movies List */
+    .movie-list {
+      list-style: none;
+      padding: 0;
+    }
+    .movie-list li {
+      padding: 12px 20px;
+      margin: 8px 0;
+      background: rgba(59,130,246,0.05);
+      border-left: 4px solid #3b82f6;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .movie-list li:hover {
+      background: rgba(59,130,246,0.1);
+      transform: translateX(4px);
+    }
+    .favorite-movie {
+      background: linear-gradient(135deg, #fef9c3, #fde047) !important;
+      color: #713f12;
+      font-weight: 600;
+      border-left: 4px solid #f59e0b;
+      box-shadow: 0 2px 8px rgba(245,158,11,0.3);
+    }
+
+    /* Cities List */
+    .city-list {
+      list-style: none;
+      counter-reset: city-counter;
+    }
+    .city-list li {
+      counter-increment: city-counter;
+      padding: 15px 20px;
+      margin: 8px 0;
+      border-radius: 12px;
+      position: relative;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    .city-list li::before {
+      content: counter(city-counter);
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #3b82f6;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .city-list li:nth-child(odd) {
+      background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(59,130,246,0.05));
+    }
+    .city-list li:nth-child(even) {
+      background: linear-gradient(135deg, rgba(22,163,74,0.1), rgba(22,163,74,0.05));
+    }
+    .city-list li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: linear-gradient(135deg, rgb(30,41,59) 0%, rgb(15,23,42) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1 id="main-heading">About Us - Aditya Yadav</h1>
+    <nav>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="https://linkedin.com/in/aditya-yadav-570846289" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#movies"><i class="fas fa-film"></i> Favorites</a>
+      <a href="#cities"><i class="fas fa-map-marker-alt"></i> Cities</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="about-section">
+      <h2>My Journey</h2>
+      <p class="section-subtitle">From student to innovator</p>
+      <div class="about-content">
+        <div class="about-card">
+          <h3>Education</h3>
+          <p>B.Tech in Computer Science, GLA University<br>Specialization: AIML & IoT</p>
+        </div>
+        <div class="about-card">
+          <h3>Skills</h3>
+          <p>Python, Java, HTML, CSS, Machine Learning, IoT Development</p>
+        </div>
+        <div class="about-card">
+          <h3>Projects</h3>
+          <p>Fraud Detection, Smart Waste Management, Automated Drones</p>
+        </div>
+        <div class="about-card">
+          <h3>Soft Skills</h3>
+          <p>Leadership, Problem-solving, Teamwork, Communication</p>
+        </div>
+      </div>
+      <p class="bio-text">
+        I'm passionate about leveraging technology to solve real-world challenges. From developing AI-powered fraud detection systems to building smart city solutions, I believe in creating technology that makes a meaningful impact on society.
+      </p>
+    </section>
+
+    <section id="movies" class="culture-section">
+      <h2>My Favorite Movies</h2>
+      <ul class="movie-list">
+        <li>The Social Network</li>
+        <li>The Imitation Game</li>
+        <li>Inception</li>
+        <li class="favorite-movie">Interstellar</li>
+        <li>Blade Runner 2049</li>
+      </ul>
+    </section>
+
+    <section id="cities" class="locations-section">
+      <h2>Cities I'd Love to Visit</h2>
+      <ol class="city-list">
+        <li>San Francisco</li>
+        <li>London</li>
+        <li>Tokyo</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <h4>Aditya Yadav</h4>
+    <p>Engineering the future through AI & IoT innovation.</p>
+    <p>Contact: aditya.yadav@gla.ac.in</p>
+    <p>
+      <a href="https://linkedin.com/in/aditya-yadav-570846289" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </p>
+    <p>&copy; 2025 Aditya Yadav. All rights reserved. | Crafted with code and curiosity</p>
+  </footer>
+</body>
+</html>
